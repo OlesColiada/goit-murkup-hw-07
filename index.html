@@ -11,7 +11,7 @@
       rel="stylesheet">
     <title>WEB STUDIO MAIN PAGE</title>
     <link rel="stylesheet" href="./css/modern_normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styleadapt.css">
   </head>
   <body>
     <!--Header-->
@@ -21,19 +21,17 @@
         <a href="./index.html" class="logo-start link" target="_parent"
           >WEB<span class="logo-finish link header">STUDIO</span></a>
         <!--Site navigation-->
-        
-          <ul class="nav">
-            <li class="list">
-              <a href="./index.html" class="nav-title link current-page">Studio</a>
-            </li>
-            <li class="list">
-              <a href="./portfolio.html" class="nav-title link">Portfolio</a>
-            </li>
-            <li class="list">
-              <a href="./contacts.html" class="nav-title link">Contacts</a>
-            </li>
-          </ul>
-        
+        <ul class="nav">
+          <li class="list">
+            <a href="./index.html" class="nav-title link current-page">Studio</a>
+          </li>
+          <li class="list">
+            <a href="./portfolio.html" class="nav-title link">Portfolio</a>
+          </li>
+          <li class="list">
+            <a href="./contacts.html" class="nav-title link">Contacts</a>
+          </li>
+        </ul>
         <!--Site Contacts-->
         <ul class="contacts">
           <li class="list">
@@ -45,72 +43,78 @@
               >+11 (000) 111-11-11</a>
           </li>
         </ul>
+        <!-- Humburger-Close button -->
+        <button type="button" class="humberger-close-btn">
+          <svg width="32px" height="22px"> 
+            <use href="./images/Icons/sprite.svg#icon-humburger-btn"></use>
+            <use href="./images/Icons/sprite.svg#icon-Cross-btn"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--Main-->
-    <main>
-      
-      <!--Hero Section-->
-      <section class="section-hero">
-        <div class="container-hero"> 
-          <h1 class="hero-text maintitle">Effective Solutions for Your Business</h1>
-          <!-- Modal window one -->
-          <button type="button" class="hero firstbutton" data-modal-open>Order Service</button>
-            <div class="backdrop is-hidden" data-modal>
-              <div class="modal-one">
-                <button  class="close-btn" data-modal-close>x</button>
-                <p class="modal-title">Leave your contacts and we will call you back</p>
-                <form name="main-modal" class="modal-user-info">
+    <main>      
+    <!--Hero Section-->
+    <section class="section-hero">
+      <div class="container-hero"> 
+        <h1 class="hero-text maintitle">Effective Solutions<br>for Your Business</h1>
+        <!-- Modal window one -->
+        <button type="button" class="hero firstbutton" data-modal-open>Order Service</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-one">
+              <button  class="close-btn" data-modal-close>x</button>
+              <p class="modal-title">Leave your contacts and we will call you back</p>
+              <form name="main-modal" class="modal-user-info">
 
-                    <div class="section">
-                      <label for="user-name" class="modal-user-label">Name</label>
-                      <div class="modal-user-data">
-                        <input type="text" id="user-name" name="user-name" class="modal-user-input" required>
-                        <svg width="12px" height="12px" class="modal-user-icon">
-                          <use href="./images/Icons/sprite.svg#icon-visitor"></use>
-                        </svg>
-                      </div>
-                    </div >
-
-
-                  <div class="section">
-                    <label for="user-phone" class="modal-user-label">Phone</label>
-                    <div class="modal-user-data">
-                      <input type="tel" id="user-phone" name="user-phone" class="modal-user-input" required>
-                      <svg width="13px" height="13px" class="modal-user-icon">
-                        <use href="./images/Icons/sprite.svg#icon-phone"></use>
-                      </svg>
-                    </div >
-                  </div >
-
-                  <div class="section">
-                    <label for="user-email" class="modal-user-label">E-mail</label>
-                    <div class="modal-user-data" required>
-                      <input type="email" id="user-email" name="user-email" class="modal-user-input" required>
-                      <svg width="15px" height="12px" class="modal-user-icon">
-                        <use href="./images/Icons/sprite.svg#icon-letter"></use>
-                      </svg>
-                    </div >
-                  </div >
-
-                  <div class="section">
-                    <label for="user-massage" class="modal-user-label">Comment</label>
-                    <textarea name="" id="user-massage" placeholder="Text input" name="user-massage" class="modal-textarea"></textarea>
-                  </div >
-                  
-                  <div class="modal-acception">
-                    <label class="chackbox-label">
-                      <input type="checkbox" name="user-agreement" class="modal-accept" required>I accept the terms and conditions of the <a href="" class="policy-acception">Privacy Policy</a>
-                    </label>
+                <div class="section">
+                  <label for="user-name" class="modal-user-label">Name</label>
+                  <div class="modal-user-data">
+                    <input type="text" id="user-name" name="user-name" class="modal-user-input" required>
+                    <svg width="12px" height="12px" class="modal-user-icon">
+                      <use href="./images/Icons/sprite.svg#icon-visitor"></use>
+                    </svg>
                   </div>
+                </div >
 
-                  <button type="submit" name="btn-submit" class="modal-submit-btn firstbutton">Send</button>
 
-                </form>
-              </div>
+                <div class="section">
+                  <label for="user-phone" class="modal-user-label">Phone</label>
+                  <div class="modal-user-data">
+                    <input type="tel" id="user-phone" name="user-phone" class="modal-user-input" required>
+                    <svg width="13px" height="13px" class="modal-user-icon">
+                      <use href="./images/Icons/sprite.svg#icon-phone"></use>
+                    </svg>
+                  </div >
+                </div >
+
+                <div class="section">
+                  <label for="user-email" class="modal-user-label">E-mail</label>
+                  <div class="modal-user-data" required>
+                    <input type="email" id="user-email" name="user-email" class="modal-user-input" required>
+                    <svg width="15px" height="12px" class="modal-user-icon">
+                      <use href="./images/Icons/sprite.svg#icon-letter"></use>
+                    </svg>
+                  </div >
+                </div >
+
+                <div class="section">
+                  <label for="user-massage" class="modal-user-label">Comment</label>
+                  <textarea name="" id="user-massage" placeholder="Text input" name="user-massage" class="modal-textarea"></textarea>
+                </div >
+                
+                <div class="modal-acception">
+                  <label class="chackbox-label">
+                    <input type="checkbox" name="user-agreement" class="modal-accept" required>I accept the terms and conditions of the <a href="" class="policy-acception">Privacy Policy</a>
+                  </label>
+                </div>
+
+                <button type="submit" name="btn-submit" class="modal-submit-btn firstbutton">Send</button>
+
+              </form>
             </div>
-        </div>
-      </section>
+          </div>
+      </div>
+    </section>
       
       <!--Features Section-->
       <section class="section">
@@ -176,27 +180,33 @@
           <ul class="wawd-list list">
             <li>
               <img
-                src="./images/Main_page/display.jpg"
+                srcset="./images/Main_page/wawd_desctop_jpg@1x_360.jpg 1x,
+                        ./images/Main_page/wawd_desctop_jpg@2x_720.jpg 2x"
+                src="./images/Main_page/wawd_desctop_jpg@1x_360.jpg"
                 alt="display"
                 class="wawd-image"
                 width="360"
-                height="300">
+                loading="lazy">
             </li>
             <li>
               <img
+              srcset="./images/Main_page/wawd_center_jpg@1x_360.jpg 1x,
+                      ./images/Main_page/wawd_center_jpg@2x_720.jpg 2x"
                 src="./images/Main_page/app.jpg"
                 alt="application"
                 class="wawd-image"
                 width="360"
-                height="300">
+                loading="lazy">
             </li>
             <li>
               <img
+                srcset="./images/Main_page/wawd_right_jpg@1x_360.jpg 1x,
+                        ./images/Main_page/wawd_right_jpg@2x_720.jpg 2x"
                 src="./images/Main_page/adapt.jpg"
+                width="360"
                 alt="adaptation"
                 class="wawd-image"
-                width="360"
-                height="300">
+                loading="lazy">
             </li>
           </ul>
         </div>
@@ -204,13 +214,20 @@
 
       <!--Our team Section-->
       <section class="team-section">
-        <div class="team-container">
+        <div class="team-container container">
           <h2 class="team-section secondtitle">Our team</h2>
           <ul class="team-section list">
             <li class="team-card">
               <article class="team-card">
                 <div class="team-image">
-                  <img src="./images/Main_page/tm1.jpg" alt="team-pm" class="team-image">
+                  <img 
+                  srcset="./images/Main_page/team_prod-designer_jpg@1x_264.jpg 1x,
+                          ./images/Main_page/team_prod-designer_jpg@2x_528.jpg 2x"
+                        width="264"
+                        src="./images/Main_page/team_prod-designer_jpg@1x_264.jpg"
+                        alt="team product designer"
+                        class="team-image"
+                        loading="lazy">
                 </div>
                 <div class="team-member-info">
                   <h3 class="team-section thirdtitle">Mark Guerrero</h3>
@@ -243,7 +260,14 @@
             <li class="team-card">
               <article class="team-card">
                 <div class="team-image">
-                  <img src="./images/Main_page/tm2.jpg" alt="team-frontend" class="team-image">
+                  <img 
+                  srcset="./images/Main_page/team_frontend_jpg@1x_264.jpg 1x,
+                          ./images/Main_page/team_frontend_jpg@2x_528.jpg 2x"
+                  width="264"
+                  src="./images/Main_page/team_frontend_jpg@1x_264.jpg"
+                  alt="team frontend developer" 
+                  class="team-image"
+                  loading="lazy">
                 </div>
                 <div class="team-member-info">
                   <h3 class="team-section thirdtitle">Tom Ford</h3>
@@ -276,7 +300,14 @@
             <li class="team-card">
               <article class="team-card">
                 <div class="team-image">
-                  <img src="./images/Main_page/tm3.jpg" alt="team-marketing" class="team-image">
+                  <img
+                  srcset="./images/Main_page/team_marketing_jpg@1x_264.jpg 1x,
+                          ./images/Main_page/team_marketing_jpg@2x_528.jpg 2x"
+                  width="264"
+                  src="./images/Main_page/team_marketing_jpg@1x_264.jpg"
+                  alt="team-marketing"
+                  class="team-image"
+                  loading="lazy">
                 </div>
                 <div class="team-member-info">
                   <h3 class="team-section thirdtitle">Camila Garcia</h3>
@@ -309,7 +340,14 @@
             <li class="team-card">
               <article class="team-card">
                 <div class="team-image">
-                  <img src="./images/Main_page/tm4.jpg" alt="team-designer" class="team-image">
+                  <img
+                  srcset="./images/Main_page/team_designer_jpg@1x_264.jpg 1x,
+                          ./images/Main_page/team_designer_jpg@2x_528.jpg 2x"
+                  width="264"
+                  src="./images/Main_page/team_designer_jpg@1x_264.jpg"
+                  alt="team UI designer"
+                  class="team-image"
+                  loading="lazy">
                 </div>
                 <div class="team-member-info">
                   <h3 class="team-section thirdtitle">Daniel Wilson</h3>
@@ -397,7 +435,7 @@
     
     <!--Footer-->
     <footer class="footer-section">
-      <div class="container div-container">
+      <div class="container footer-container">
         <!-- Footer Text/Info -->
         <div class="footer-first">
           <!--Footer Logo-->
