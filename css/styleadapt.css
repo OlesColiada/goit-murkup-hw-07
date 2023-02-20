@@ -152,7 +152,7 @@ div.container {
 
 /* Container mobile*/
 div.container {
-    max-width: 480px;
+    min-width: 320px;
 }
 
 
@@ -216,7 +216,7 @@ ul.contacts {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Main_page/people-office@1x_mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     background-color: linear;
     margin-left: auto;
     margin-right: auto;  
@@ -459,7 +459,7 @@ p.modal-title {
 /* Team section mobile*/
 
 .section-team {
-    padding: 96px 82px 128px 82px;
+    padding: 96px 0 128px 0;
     background-color: var(--cloud-bg-color);
 }
 
@@ -599,7 +599,7 @@ h2.customers-section.title {
 
 section.section-footer{
     background-color: var(--title-color);
-    padding: 96px 15px;
+    padding: 96px 0px;
 }
 
 div.footer-first {
@@ -713,7 +713,7 @@ p {
 
 
 .inp-email-subscr {
-    width: 396px;
+    min-width: 290px;
     padding: 8px 0 8px 16px;
     background-color:var(--title-color);
     border:  1px solid rgba(255, 255, 255, 0.3);
@@ -1207,7 +1207,7 @@ h2.customers-section.title {
 
 section.section-footer{
     background-color: var(--title-color);
-    padding: 96px 15px;
+    padding: 96px 0;
 }
 
 div.footer-first {
@@ -1321,7 +1321,7 @@ p {
 
 
 .inp-email-subscr {
-    width: 396px;
+    max-width: 396px;
     padding: 8px 0 8px 16px;
     background-color:var(--title-color);
     border:  1px solid rgba(255, 255, 255, 0.3);
