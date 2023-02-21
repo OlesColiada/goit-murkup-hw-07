@@ -15,8 +15,11 @@
   </head>
   <body>
 
+
+
+    
     <!--Header-->
-    <header>
+    <header class="header">
       <!-- Open Header container -->
       <div class="container">
         <section class="section-header">
@@ -25,33 +28,66 @@
             <a href="./index.html" class="logo-start link" target="_parent"
               >WEB<span class="logo-finish link header">STUDIO</span></a>
             <!--Site navigation-->
-            <ul class="nav">
-              <li class="list">
-                <a href="./index.html" class="nav-title link current-page">Studio</a>
-              </li>
-              <li class="list">
-                <a href="./portfolio.html" class="nav-title link">Portfolio</a>
-              </li>
-              <li class="list">
-                <a href="./contacts.html" class="nav-title link">Contacts</a>
-              </li>
-            </ul>
-            <!--Site Contacts-->
-            <ul class="contacts">
-              <li class="list">
-                <a href="mailto:info@devstudio.com" class="contact link"
-                  >info@devstudio.com</a>
-              </li>
-              <li class="list">
-                <a href="tel:+110001111111" class="contact link"
-                  >+11 (000) 111-11-11</a>
-              </li>
-            </ul>
+            <div class="mobile-menu is-open" data-menu id="menu-container">
+              <ul class="nav">
+                <li class="list">
+                  <a href="./index.html" class="nav-title link current-page">Studio</a>
+                </li>
+                <li class="list">
+                  <a href="./portfolio.html" class="nav-title link">Portfolio</a>
+                </li>
+                <li class="list">
+                  <a href="./contacts.html" class="nav-title link">Contacts</a>
+                </li>
+              </ul>
+              <!--Site Contacts-->
+              <ul class="contacts">
+                <li class="list">
+                  <a href="mailto:info@devstudio.com" class="contact-email link"
+                    >info@devstudio.com</a>
+                </li>
+                <li class="list">
+                  <a href="tel:+110001111111" class="contact-tel link"
+                    >+11 (000) 111-11-11</a>
+                </li>
+              </ul>
+              <!-- Social links -->
+              <div class="social-links-header">
+                <a href="https://www.instagram.com/" rel="noopener noreferrer" class="circle-team-link">
+                    <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                      <use href="./images/Icons/sprite.svg#icon-instagram_footer"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/" rel="noopener noreferrer" class="circle-team-link">
+                    <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                      <use href="./images/Icons/sprite.svg#icon-twitter_footer"></use>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/" rel="noopener noreferrer" class="circle-team-link">
+                    <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                      <use href="./images/Icons/sprite.svg#icon-facebook_footer"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/" rel="noopener noreferrer" class="circle-team-link">
+                    <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                      <use href="./images/Icons/sprite.svg#icon-linkedin-_footer"></use>
+                    </svg>
+                </a>
+              </div>  
+            </div >
             <!-- Humburger-Close button -->
-            <button type="button" class="humberger-close-btn">
-              <svg width="32px" height="22px"> 
-                <use href="./images/Icons/sprite.svg#icon-humburger-btn"></use>
-                <use href="./images/Icons/sprite.svg#icon-Cross-btn"></use>
+            <button 
+              type="button"
+              class="humburger-cross-btn is-open"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="menu-container">
+              <svg 
+                width="32" 
+                height="22" 
+                aria-label="mobile menu switcher">
+                <use href="./images/Icons/sprite.svg#icon-humburger-btn" class="humburger-button"></use>
+                <use href="./images/Icons/sprite.svg#icon-Cross-btn" class="cross-button"></use>
               </svg>
             </button>
           </div >
@@ -59,6 +95,9 @@
       <!-- Close header container -->
       </div>
     </header>
+
+
+
 
     <!--Main !!!-->
     <main>
@@ -520,10 +559,11 @@
   
 
 
-
-
-
-
+    <!-- Connect mobile menu -->
+    <script src="./js/mobile_menu.js"></script>
+    <!-- Connected JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.j"></script>
+    <!-- Connected js-file -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
