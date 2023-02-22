@@ -344,7 +344,7 @@ h1.hero-text.maintitle {
 .modal-one {
     display: flex;
     flex-direction: column;
-    width: 408px;
+    max-width: 408px;
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
@@ -354,6 +354,8 @@ h1.hero-text.maintitle {
     
     transform: translate(-50%, -50%);
     z-index: 2000;
+
+    margin: 96px 18px;
 }
 
 .modal-user-info {
