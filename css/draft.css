@@ -1040,7 +1040,7 @@ h1.hero-text.maintitle {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 111%;
+    top: 96px;
     left: 50%;
     padding: 72px 24px 24px 24px;
     
@@ -1754,7 +1754,7 @@ div.container-hero {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 111%;
+    top: 96px;
     left: 50%;
     padding: 72px 24px 24px 24px;
     
@@ -2466,7 +2466,7 @@ h1.hero-text.maintitle {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 111%;
+    top: 0;
     left: 50%;
     padding: 72px 24px 24px 24px;
     transform: translate(-50%, -50%);
