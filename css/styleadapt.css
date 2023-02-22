@@ -173,6 +173,10 @@ header {
     justify-content:space-between;
 }
 
+.posittion-marker {
+    position: relative;
+}
+
 /* Logo  mobile*/
 .logo-start {
     font-family: 'Raleway';
@@ -247,8 +251,8 @@ a.contact-email {
 /* Humburger-close button mobile*/
 .humburger-cross-btn {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
     border: none;
     background-color: var(--main-white-color);
@@ -257,15 +261,15 @@ a.contact-email {
 }
 
 .humburger-cross-btn .cross-button {
-    display: none;
-}
-
-.humburger-cross-btn.is-open .cross-button{
     display: block;
 }
 
-.humburger-cross-btn.is-open .humburger-button {
+.humburger-cross-btn.is-open .cross-button{
     display: none;
+}
+
+.humburger-cross-btn.is-open .humburger-button {
+    display: block;
 }
 
 .humburger-button {
@@ -275,20 +279,20 @@ a.contact-email {
 
 /* Mobile menu */
 .mobile-menu {
-    display: none;
+    display: block;
     background-color: var(--main-white-color);
-    border: 1px solid var(--outline-customers);
+    /* border: 1px solid var(--outline-customers); */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     position: absolute;
     left: 0;
-    top: 0;
+    top: -25px;
     padding: 80px 40px 40px 40px;
     width: 100%;
     height: 796px;
 }
 
 .mobile-menu.is-open {
-    display: block;
+    display: none;
 }
 
         /* Hero section mobile */
@@ -303,7 +307,7 @@ a.contact-email {
     margin-left: auto;
     margin-right: auto;  
     background-color: var(--title-color);
-    max-width: 480px;
+    /* max-width: 480px; */
 }
 
 .container-hero {
@@ -354,14 +358,7 @@ h1.hero-text.maintitle {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: relative;
-    /* position:
-     absolute;
-    top: 100%;
-    left: 50%; */
     padding: 72px 24px 24px 24px;
-    
-    /* transform: translate(-50%, -50%);
-    z-index: 2000; */
 }
 
 p.modal-title {
@@ -471,7 +468,7 @@ input, textarea {
 textarea.modal-textarea {
     resize: none;
     height: 120px;
-    max-width: 360px;
+    max-width: 100%;
     padding: 8px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -513,188 +510,6 @@ p.modal-title {
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
 }
-
-
-
-/* .backdrop {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgba(46, 47, 66, 40%);
-    z-index: 1000;
-    
-    transition: opacity 250ms linear, visibility 250ms linear;
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.modal-one {
-    display: flex;
-    flex-direction: column;
-    max-width: 408px;
-    border-radius: 4px;
-    background-color: #FCFCFC;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 72px 24px 24px 24px;
-    
-    transform: translate(-50%, -50%);
-    z-index: 2000;
-
-}
-
-.modal-user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.modal-user-icon {
-    fill: var(--title-color);
-    position: absolute;
-    top: 12px;
-    left: 16px;
-}
-
-.modal-user-input:focus + svg.modal-user-icon {
-    fill: var(--main-brand-color);
-}
-
-div.section {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.modal-user-data {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 8px;
-    position: relative;
-}
-
-textarea {
-    margin-bottom: 16px;
-}
-
-.modal-user-input {
-    width: 360px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding: 8px 16px 8px 38px;
-}
-
-.modal-user-label {
-    color: var(--outline-customers);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 133%;
-    letter-spacing: 0.04em;
-}
-
-.modal-user-input:active,
-.modal-user-input:focus,
-.modal-textarea:focus,
-.modal-textarea:active {
-    border: 1px solid var(--main-brand-color);
-}
-
-input, textarea {
-    outline: none;
-}
-
-.modal-acception {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 133%;
-    letter-spacing: 0.04em;
-    color: #757575;
-    margin-bottom: 24px;
-}
-
-.chackbox-label {
-    display: flex;
-    gap: 8 px;
-}
-
-.modal-accept {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--title-color);
-    margin-right: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z' fill='%23ffffff'/%3E%3C/svg%3E");    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    
-    transition: background-color 250ms linear;
-}
-
-.modal-accept:checked {
-    background-color: var(--active-btn-color);
-}
-
-
-.policy-acception {
-    text-decoration-line: underline;
-    color: var(--main-brand-color);
-    margin-left: 4px;
-}
-
-textarea.modal-textarea {
-    resize: none;
-    height: 120px;
-    width: 360px;
-    padding: 8px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
-.close-btn {
-    text-align: center;
-    width: 24px;
-    height: 24px;
-    background-color: var(--footer-small-text-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    
-    position: absolute;
-    right: 24px;
-    top: 24px;
-}
-
-p.modal-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: var(--title-color);
-    margin-bottom: 14px;
-}
-
-.modal-submit-btn {
-    width: 169px;
-    height: 56px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-
-::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 133%;
-    letter-spacing: 0.04em;
-    color: rgba(117, 117, 117, 0.5);
-} */
 
 
 /* Features mobile*/
@@ -953,7 +768,7 @@ p {
     width: 40px;
     
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+} 
 
 .circle-footer-link:hover,
 .circle-footer-link:focus {
@@ -1125,8 +940,8 @@ a.contact-email {
 /* Humburger-close button mobile*/
 .humburger-cross-btn {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
     border: none;
     background-color: var(--main-white-color);
@@ -1135,33 +950,33 @@ a.contact-email {
 }
 
 .humburger-cross-btn .cross-button {
-    display: none;
-}
-
-.humburger-cross-btn.is-open .cross-button{
     display: block;
 }
 
-.humburger-cross-btn.is-open .humburger-button {
+.humburger-cross-btn.is-open .cross-button{
     display: none;
+}
+
+.humburger-cross-btn.is-open .humburger-button {
+    display: block;
 }
 
 /* Mobile menu */
 .mobile-menu {
-    display: none;
+    display: block;
     background-color: var(--main-white-color);
-    border: 1px solid var(--outline-customers);
+    /* border: 1px solid var(--outline-customers); */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     position: absolute;
     left: 0;
-    top: 0;
+    top: -25px;
     padding: 80px 40px 40px 40px;
     width: 100%;
     height: 796px;
 }
 
 .mobile-menu.is-open {
-    display: block;
+    display: none;
 }
 
 
@@ -1172,13 +987,13 @@ a.contact-email {
     display: block;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Main_page/people-office@1x_mobile.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
     background-size: cover;
     background-color: linear;
     margin-left: auto;
     margin-right: auto;  
     background-color: var(--title-color);
-    max-width: 480px;
+    /* max-width: 480px; */
 }
 
 .container-hero {
@@ -1227,7 +1042,7 @@ h1.hero-text.maintitle {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 80%;
+    top: 111%;
     left: 50%;
     padding: 72px 24px 24px 24px;
     
@@ -1638,7 +1453,7 @@ p {
     width: 40px;
     
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+} 
 
 .circle-footer-link:hover,
 .circle-footer-link:focus {
@@ -1941,7 +1756,7 @@ div.container-hero {
     border-radius: 4px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 50%;
+    top: 111%;
     left: 50%;
     padding: 72px 24px 24px 24px;
     
@@ -2397,7 +2212,7 @@ p {
     width: 40px;
     
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+} 
 
 .circle-footer-link:hover,
 .circle-footer-link:focus {
@@ -2621,6 +2436,7 @@ section.section-hero {
     background-color: var(--title-color);
 }
 
+
 div.container-hero {
     display: flex;
     flex-direction: column;
@@ -2643,6 +2459,20 @@ h1.hero-text.maintitle {
     text-align: center;
     letter-spacing: 0.02em;
     margin: 0;
+}
+
+.modal-one {
+    display: flex;
+    flex-direction: column;
+    width: 408px;
+    border-radius: 4px;
+    background-color: #FCFCFC;
+    position: absolute;
+    top: 111%;
+    left: 50%;
+    padding: 72px 24px 24px 24px;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
 }
 
 
@@ -3062,5 +2892,21 @@ input.inp-email-subscr {
 
 .icon-telegram {
     fill: var(--main-white-color);
-}
-}
+}}
+
+/* Beckground Retina for Hero section */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:1200px) {
+    section.section-hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Main_page/people-office@2x_desctop.jpg); 
+}}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:768px) {
+    section.section-hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Main_page/people-office@2x_tublet.jpg); 
+}}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:480px) {
+    section.section-hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Main_page/people-office@2x_mobile.jpg); 
+}}
