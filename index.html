@@ -18,11 +18,11 @@
     <!--Header-->
     <header class="header">
       <!-- Open Header container -->
-      <div class="container">
-        <section class="section-header">
+      <div class="container-header">
+        <div class="section-header">
           <div class="container-nav posittion-marker">
             <!--Site Logo-->
-            <a href="./index.html" class="logo-start link" target="_parent"
+            <a href="./index.html" class="logo-start link header" target="_parent"
               >WEB<span class="logo-finish link header">STUDIO</span></a>
             <!--Site navigation-->
             <div class="mobile-menu is-open" data-menu id="menu-container">
@@ -88,7 +88,7 @@
               </svg>
             </button>
           </div >
-        </section >
+        </div >
       <!-- Close header container -->
       </div>
     </header>
@@ -97,7 +97,7 @@
     <main>
       
         <!--Hero Section-->
-        <section class="section-hero">
+        <div class="section-hero">
           <div class=" container-hero"> 
             <h1 class="hero-text maintitle">Effective Solutions<br>for Your Business</h1>
             <!-- Modal window one -->
@@ -131,7 +131,7 @@
     
                     <div class="section">
                       <label for="user-email" class="modal-user-label">E-mail</label>
-                      <div class="modal-user-data" required>
+                      <div class="modal-user-data">
                         <input type="email" id="user-email" name="user-email" class="modal-user-input" required>
                         <svg width="15px" height="12px" class="modal-user-icon">
                           <use href="./images/Icons/sprite.svg#icon-letter"></use>
@@ -141,7 +141,7 @@
     
                     <div class="section">
                       <label for="user-massage" class="modal-user-label">Comment</label>
-                      <textarea name="" id="user-massage" placeholder="Text input" name="user-massage" class="modal-textarea"></textarea>
+                      <textarea id="user-massage" placeholder="Text input" name="user-massage" class="modal-textarea"></textarea>
                     </div >
                     
                     <div class="modal-acception">
@@ -156,11 +156,11 @@
                 </div>
               </div>
           </div>
-        </section>
+        </div>
 
         <!--Features Section-->
         <div class="container">
-          <section class="section-features">
+          <div class="section-features">
             <h2 hidden class="features-section secondtitle">Features</h2>
             <ul class="features list">
               <li class="feature-li">
@@ -212,12 +212,12 @@
                 </p>
               </li>
             </ul>
-          </section>
+          </div>
         </div>
 
         <!--What are we doing Section-->
         <div class="container">
-          <section class="section-wawd">
+          <div class="section-wawd">
             <div class="container-wawd">
               <h2 class="wawd-section secondtitle">What are we doing</h2>
               <ul class="wawd-list list">
@@ -253,11 +253,11 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </div >
 
         <!--Our team Section-->
-        <section class="section-team">
+        <div class="section-team">
           <div class="container">
             <h2 class="team-section title">Our team</h2>
             <ul class="team-section list">
@@ -279,17 +279,17 @@
                     <div class="social-links">
                       <a href="https://www.instagram.com/" rel="noopener noreferrer" class="circle-team-link">
                           <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
-                            <use href="./images/Icons/sprite.svg#icon-instagram_footer"></use>
+                            <use href="./images/Icons/sprite.svg#icon-instagram_footer"  class="social-link-svg"></use>
                           </svg>
                       </a>
                       <a href="https://twitter.com/" rel="noopener noreferrer" class="circle-team-link">
                           <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
-                            <use href="./images/Icons/sprite.svg#icon-twitter_footer"></use>
+                            <use href="./images/Icons/sprite.svg#icon-twitter_footer"  class="social-link-svg"></use>
                           </svg>
                       </a>
                       <a href="https://www.facebook.com/" rel="noopener noreferrer" class="circle-team-link">
                           <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
-                            <use href="./images/Icons/sprite.svg#icon-facebook_footer"></use>
+                            <use href="./images/Icons/sprite.svg#icon-facebook_footer"  class="social-link-svg"></use>
                           </svg>
                       </a>
                       <a href="https://www.linkedin.com/" rel="noopener noreferrer" class="circle-team-link">
@@ -423,11 +423,11 @@
               </li>
             </ul>
           </div>
-        </section>
+        </div>
 
         <!--Our customers section-->
         <div class="container">
-          <section class="section-customers">
+          <div class="section-customers">
             <div class="container-customers">
               <h2 class="customers-section title">Customers</h2>
               <ul class="customers-ul">
@@ -475,7 +475,7 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </div >
 
     </main>
@@ -484,7 +484,7 @@
     <!--Footer !!!-->
     <!-- Open footer container -->
     <footer class="footer">
-    <section class="section-footer">
+    <div class="section-footer">
       <div class="container container-footer">
         <!-- Footer Text/Info -->
         <div class="footer-first">
@@ -503,28 +503,28 @@
           <ul class="footer-social-lincs">
             <li>
               <a href="https://www.instagram.com/" rel="noopener noreferrer" class="circle-footer-link">
-                <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                <svg width="40px" height="40px" class="social-link-footer" viewBox="0 0 32 32">
                   <use href="./images/Icons/sprite.svg#icon-instagram_footer" class="icon-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="https://twitter.com/" rel="noopener noreferrer" class="circle-footer-link">
-                <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                <svg width="40px" height="40px" class="social-link-footer" viewBox="0 0 32 32">
                   <use href="./images/Icons/sprite.svg#icon-twitter_footer" class="icon-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="https://www.facebook.com/" rel="noopener noreferrer" class="circle-footer-link">
-                <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                <svg width="40px" height="40px" class="social-link-footer" viewBox="0 0 32 32">
                   <use href="./images/Icons/sprite.svg#icon-facebook_footer" class="icon-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/" rel="noopener noreferrer" class="circle-footer-link">
-                <svg width="40px" height="40px" class="social-link" viewBox="0 0 32 32">
+                <svg width="40px" height="40px" class="social-link-footer" viewBox="0 0 32 32">
                   <use href="./images/Icons/sprite.svg#icon-linkedin-_footer" class="icon-footer"></use>
                 </svg>
               </a>
@@ -545,7 +545,7 @@
           </form>
         </div>
       </div>
-    </section>
+    </div>
     </footer>
   
 
